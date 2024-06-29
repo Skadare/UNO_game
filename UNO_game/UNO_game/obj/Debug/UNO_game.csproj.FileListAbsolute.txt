@@ -8,3 +8,13 @@ C:\Users\HP\source\repos\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.GenerateRes
 C:\Users\HP\source\repos\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\UNO_game\UNO_game\obj\Debug\UNO_game.exe
 C:\Users\HP\source\repos\UNO_game\UNO_game\obj\Debug\UNO_game.pdb
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\bin\Debug\UNO_game.exe.config
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\bin\Debug\UNO_game.exe
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\bin\Debug\UNO_game.pdb
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.AssemblyReference.cache
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.Form1.resources
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.Properties.Resources.resources
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.GenerateResource.cache
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.exe
+D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.pdb

@@ -35,7 +35,7 @@ namespace UNO_game
         public void loadTable()
         {
       
-            Table.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "table.jpg"));
+            Table.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
         }
         public void loadDeck() {
             //Card.CardFactory(data)
@@ -70,7 +70,8 @@ namespace UNO_game
                 opponentHand.Add(card);
 
             }
-           
+            opponentCardsFlow.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+
 
         }
         public void loadPlayerCards() {
@@ -104,8 +105,14 @@ namespace UNO_game
                     }
                 }
             }
-        }   
-       
 
+            playerCardsFlow.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+            DeckAndTossFlow.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+        }
+
+        private void Table_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

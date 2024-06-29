@@ -16,13 +16,14 @@ namespace UNO_game
         private List<PictureBox> playerHand;
         private List<PictureBox> opponentHand;
         private PictureBox selectedCard;
-       public  Deck deck;
+        public  Deck deck;
         public Opponent opp;
         public Player player;
 
         public Form1()
         {
             InitializeComponent();
+         //   this.Width = 1200;
             loadTable();
             player = new Player();
             opp = new Opponent();
@@ -43,6 +44,7 @@ namespace UNO_game
             Table.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
             CardTossPictureBox.BackgroundImage= Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
             DeckPictureBox.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+            DeckPictureBox.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Deck", "deck.png"));
 
         }
         public void loadDeck() {

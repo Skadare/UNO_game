@@ -53,10 +53,10 @@
             this.Table.Margin = new System.Windows.Forms.Padding(25, 75, 25, 75);
             this.Table.Name = "Table";
             this.Table.RowCount = 3;
-            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.51163F));
-            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.48837F));
-            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 210F));
-            this.Table.Size = new System.Drawing.Size(1363, 755);
+            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.80919F));
+            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.19081F));
+            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 231F));
+            this.Table.Size = new System.Drawing.Size(1464, 753);
             this.Table.TabIndex = 0;
             this.Table.Paint += new System.Windows.Forms.PaintEventHandler(this.Table_Paint);
             // 
@@ -65,15 +65,15 @@
             this.opponentCardsFlow.Location = new System.Drawing.Point(130, 10);
             this.opponentCardsFlow.Margin = new System.Windows.Forms.Padding(130, 10, 130, 10);
             this.opponentCardsFlow.Name = "opponentCardsFlow";
-            this.opponentCardsFlow.Size = new System.Drawing.Size(1103, 233);
+            this.opponentCardsFlow.Size = new System.Drawing.Size(1103, 177);
             this.opponentCardsFlow.TabIndex = 0;
             // 
             // playerCardsFlow
             // 
-            this.playerCardsFlow.Location = new System.Drawing.Point(130, 549);
-            this.playerCardsFlow.Margin = new System.Windows.Forms.Padding(130, 5, 130, 5);
+            this.playerCardsFlow.Location = new System.Drawing.Point(130, 536);
+            this.playerCardsFlow.Margin = new System.Windows.Forms.Padding(130, 15, 130, 5);
             this.playerCardsFlow.Name = "playerCardsFlow";
-            this.playerCardsFlow.Size = new System.Drawing.Size(1103, 201);
+            this.playerCardsFlow.Size = new System.Drawing.Size(1103, 212);
             this.playerCardsFlow.TabIndex = 1;
             // 
             // DeckAndTossFlow
@@ -81,25 +81,25 @@
             this.DeckAndTossFlow.Controls.Add(this.DeckPictureBox);
             this.DeckAndTossFlow.Controls.Add(this.CardTossPictureBox);
             this.DeckAndTossFlow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeckAndTossFlow.Location = new System.Drawing.Point(10, 263);
+            this.DeckAndTossFlow.Location = new System.Drawing.Point(10, 207);
             this.DeckAndTossFlow.Margin = new System.Windows.Forms.Padding(10);
             this.DeckAndTossFlow.Name = "DeckAndTossFlow";
-            this.DeckAndTossFlow.Size = new System.Drawing.Size(1343, 271);
+            this.DeckAndTossFlow.Size = new System.Drawing.Size(1444, 304);
             this.DeckAndTossFlow.TabIndex = 2;
             // 
             // DeckPictureBox
             // 
-            this.DeckPictureBox.Location = new System.Drawing.Point(25, 25);
-            this.DeckPictureBox.Margin = new System.Windows.Forms.Padding(25);
+            this.DeckPictureBox.Location = new System.Drawing.Point(25, 5);
+            this.DeckPictureBox.Margin = new System.Windows.Forms.Padding(25, 5, 25, 5);
             this.DeckPictureBox.Name = "DeckPictureBox";
-            this.DeckPictureBox.Size = new System.Drawing.Size(262, 216);
+            this.DeckPictureBox.Size = new System.Drawing.Size(300, 292);
             this.DeckPictureBox.TabIndex = 1;
             this.DeckPictureBox.TabStop = false;
             this.DeckPictureBox.Click += new System.EventHandler(this.DeckPictureBox_Click);
             // 
             // CardTossPictureBox
             // 
-            this.CardTossPictureBox.Location = new System.Drawing.Point(587, 15);
+            this.CardTossPictureBox.Location = new System.Drawing.Point(625, 15);
             this.CardTossPictureBox.Margin = new System.Windows.Forms.Padding(275, 15, 50, 15);
             this.CardTossPictureBox.Name = "CardTossPictureBox";
             this.CardTossPictureBox.Size = new System.Drawing.Size(210, 241);
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1363, 755);
+            this.ClientSize = new System.Drawing.Size(1464, 753);
             this.Controls.Add(this.Table);
             this.Name = "Form1";
             this.Text = "Form1";

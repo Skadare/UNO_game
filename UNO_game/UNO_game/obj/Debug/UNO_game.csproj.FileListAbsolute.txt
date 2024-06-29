@@ -18,3 +18,13 @@ D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.GenerateReso
 D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
 D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.exe
 D:\Users\HP\Desktop\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.pdb
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\bin\Debug\UNO_game.exe.config
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\bin\Debug\UNO_game.exe
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\bin\Debug\UNO_game.pdb
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.AssemblyReference.cache
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.Form1.resources
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.Properties.Resources.resources
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.GenerateResource.cache
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.exe
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.pdb

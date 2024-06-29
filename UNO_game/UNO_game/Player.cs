@@ -16,5 +16,11 @@ namespace UNO_game
         {
             playerCards.Add(card);
         }
+
+        public Card getCard(int index)
+        {
+            return playerCards[index];
+           
+        }
     }
 }

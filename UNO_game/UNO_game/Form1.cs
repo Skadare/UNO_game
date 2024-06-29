@@ -17,11 +17,16 @@ namespace UNO_game
         private List<PictureBox> opponentHand;
         private PictureBox selectedCard;
        public  Deck deck;
+        public Opponent opp;
+        public Player player;
 
         public Form1()
         {
             InitializeComponent();
             loadTable();
+            player = new Player();
+            opp = new Opponent();
+
             deck = new Deck();
             loadDeck();
             loadOpponentsCards();
@@ -36,6 +41,9 @@ namespace UNO_game
         {
       
             Table.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+            CardTossPictureBox.BackgroundImage= Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+            DeckPictureBox.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+
         }
         public void loadDeck() {
             //Card.CardFactory(data)
@@ -48,7 +56,7 @@ namespace UNO_game
         }
         public void loadOpponentsCards() { 
            opponentHand = new List<PictureBox>();
-            Opponent opp = new Opponent();
+            //Opponent opp = new Opponent();
             Random random = new Random();
             string[] cardfile = Directory.GetFiles(Path.Combine(Application.StartupPath, "Back"), "*.png");
 
@@ -76,7 +84,7 @@ namespace UNO_game
         }
         public void loadPlayerCards() {
             playerHand = new List<PictureBox>();
-            Player player = new Player();
+           // Player player = new Player();
             Random random = new Random();
             for (int i = 0; i < 6; i++)
             {
@@ -101,6 +109,7 @@ namespace UNO_game
                         };
                         playerCardsFlow.Controls.Add(card);
                         playerHand.Add(card);
+                        card.Click += CardPictureBox_Click; 
                         break;
                     }
                 }
@@ -108,11 +117,59 @@ namespace UNO_game
 
             playerCardsFlow.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
             DeckAndTossFlow.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
+            
+
         }
 
         private void Table_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void playerCardsFlow_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void CardPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox card = sender as PictureBox;
+
+            if (card != null)
+            {
+                playerHand.Remove(card);
+                playerCardsFlow.Controls.Remove(card);
+               
+    
+            }
+            Card c = sender as Card;
+            if(c!=null)
+            {
+                player.playerCards.Remove(c);
+            }
+            CardTossPictureBox.Image = card.Image;
+        }
+
+        private void DeckPictureBox_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int index = random.Next(deck.cards.Count - 1);
+            int test = deck.cards.Count;
+            player.addCard(deck.cards[index]);
+            Card c = deck.cards[index];
+            
+            PictureBox pb = new PictureBox
+            {
+                Image = Image.FromFile(c.path),
+                Width = 100,
+                Height = 150,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Margin = new Padding(5)
+            };
+            pb.Click += CardPictureBox_Click;
+            deck.removeCard(c);
+            playerHand.Add(pb);
+            playerCardsFlow.Controls.Add(pb);
         }
     }
 }

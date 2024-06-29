@@ -32,12 +32,12 @@
             this.opponentCardsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.playerCardsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.DeckAndTossFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.CardTossPictureBox = new System.Windows.Forms.PictureBox();
             this.DeckPictureBox = new System.Windows.Forms.PictureBox();
+            this.CardTossPictureBox = new System.Windows.Forms.PictureBox();
             this.Table.SuspendLayout();
             this.DeckAndTossFlow.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CardTossPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeckPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardTossPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Table
@@ -87,15 +87,6 @@
             this.DeckAndTossFlow.Size = new System.Drawing.Size(1343, 271);
             this.DeckAndTossFlow.TabIndex = 2;
             // 
-            // CardTossPictureBox
-            // 
-            this.CardTossPictureBox.Location = new System.Drawing.Point(587, 15);
-            this.CardTossPictureBox.Margin = new System.Windows.Forms.Padding(275, 15, 50, 15);
-            this.CardTossPictureBox.Name = "CardTossPictureBox";
-            this.CardTossPictureBox.Size = new System.Drawing.Size(210, 241);
-            this.CardTossPictureBox.TabIndex = 0;
-            this.CardTossPictureBox.TabStop = false;
-            // 
             // DeckPictureBox
             // 
             this.DeckPictureBox.Location = new System.Drawing.Point(25, 25);
@@ -104,6 +95,16 @@
             this.DeckPictureBox.Size = new System.Drawing.Size(262, 216);
             this.DeckPictureBox.TabIndex = 1;
             this.DeckPictureBox.TabStop = false;
+            this.DeckPictureBox.Click += new System.EventHandler(this.DeckPictureBox_Click);
+            // 
+            // CardTossPictureBox
+            // 
+            this.CardTossPictureBox.Location = new System.Drawing.Point(587, 15);
+            this.CardTossPictureBox.Margin = new System.Windows.Forms.Padding(275, 15, 50, 15);
+            this.CardTossPictureBox.Name = "CardTossPictureBox";
+            this.CardTossPictureBox.Size = new System.Drawing.Size(210, 241);
+            this.CardTossPictureBox.TabIndex = 0;
+            this.CardTossPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -116,8 +117,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Table.ResumeLayout(false);
             this.DeckAndTossFlow.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CardTossPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeckPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardTossPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

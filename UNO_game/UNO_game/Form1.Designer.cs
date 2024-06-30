@@ -28,109 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Table = new System.Windows.Forms.TableLayoutPanel();
-            this.opponentCardsFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.playerCardsFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.DeckAndTossFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.DeckPictureBox = new System.Windows.Forms.PictureBox();
-            this.CardTossPictureBox = new System.Windows.Forms.PictureBox();
-            this.Table.SuspendLayout();
-            this.DeckAndTossFlow.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DeckPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardTossPictureBox)).BeginInit();
+            this.MenuPictureBox = new System.Windows.Forms.PictureBox();
+            this.startButton = new System.Windows.Forms.Button();
+            this.htpButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.pbStart = new System.Windows.Forms.PictureBox();
+            this.pbHTP = new System.Windows.Forms.PictureBox();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHTP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.SuspendLayout();
             // 
-            // Table
+            // MenuPictureBox
             // 
-            this.Table.ColumnCount = 1;
-            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Table.Controls.Add(this.opponentCardsFlow, 0, 0);
-            this.Table.Controls.Add(this.playerCardsFlow, 0, 2);
-            this.Table.Controls.Add(this.DeckAndTossFlow, 0, 1);
-            this.Table.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Table.Location = new System.Drawing.Point(0, 0);
-            this.Table.Margin = new System.Windows.Forms.Padding(25, 75, 25, 75);
-            this.Table.Name = "Table";
-            this.Table.RowCount = 3;
-            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.80919F));
-            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.19081F));
-            this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 231F));
-            this.Table.Size = new System.Drawing.Size(1464, 753);
-            this.Table.TabIndex = 0;
-            this.Table.Paint += new System.Windows.Forms.PaintEventHandler(this.Table_Paint);
+            this.MenuPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MenuPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.MenuPictureBox.Name = "MenuPictureBox";
+            this.MenuPictureBox.Size = new System.Drawing.Size(734, 401);
+            this.MenuPictureBox.TabIndex = 0;
+            this.MenuPictureBox.TabStop = false;
             // 
-            // opponentCardsFlow
+            // startButton
             // 
-            this.opponentCardsFlow.Location = new System.Drawing.Point(130, 10);
-            this.opponentCardsFlow.Margin = new System.Windows.Forms.Padding(130, 10, 130, 10);
-            this.opponentCardsFlow.Name = "opponentCardsFlow";
-            this.opponentCardsFlow.Size = new System.Drawing.Size(1103, 177);
-            this.opponentCardsFlow.TabIndex = 0;
+            this.startButton.AllowDrop = true;
+            this.startButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startButton.Location = new System.Drawing.Point(635, 52);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(77, 29);
+            this.startButton.TabIndex = 1;
+            this.startButton.Text = "Start Game";
+            this.startButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // playerCardsFlow
+            // htpButton
             // 
-            this.playerCardsFlow.Location = new System.Drawing.Point(130, 536);
-            this.playerCardsFlow.Margin = new System.Windows.Forms.Padding(130, 15, 130, 5);
-            this.playerCardsFlow.Name = "playerCardsFlow";
-            this.playerCardsFlow.Size = new System.Drawing.Size(1103, 212);
-            this.playerCardsFlow.TabIndex = 1;
+            this.htpButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.htpButton.Location = new System.Drawing.Point(635, 185);
+            this.htpButton.Name = "htpButton";
+            this.htpButton.Size = new System.Drawing.Size(87, 28);
+            this.htpButton.TabIndex = 2;
+            this.htpButton.Text = "How To Play";
+            this.htpButton.UseVisualStyleBackColor = true;
+            this.htpButton.Click += new System.EventHandler(this.htpButton_Click);
             // 
-            // DeckAndTossFlow
+            // exitButton
             // 
-            this.DeckAndTossFlow.Controls.Add(this.DeckPictureBox);
-            this.DeckAndTossFlow.Controls.Add(this.CardTossPictureBox);
-            this.DeckAndTossFlow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeckAndTossFlow.Location = new System.Drawing.Point(10, 207);
-            this.DeckAndTossFlow.Margin = new System.Windows.Forms.Padding(10);
-            this.DeckAndTossFlow.Name = "DeckAndTossFlow";
-            this.DeckAndTossFlow.Size = new System.Drawing.Size(1444, 304);
-            this.DeckAndTossFlow.TabIndex = 2;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitButton.Location = new System.Drawing.Point(635, 317);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(77, 27);
+            this.exitButton.TabIndex = 3;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // DeckPictureBox
+            // pbStart
             // 
-            this.DeckPictureBox.Location = new System.Drawing.Point(25, 5);
-            this.DeckPictureBox.Margin = new System.Windows.Forms.Padding(25, 5, 25, 5);
-            this.DeckPictureBox.Name = "DeckPictureBox";
-            this.DeckPictureBox.Size = new System.Drawing.Size(300, 292);
-            this.DeckPictureBox.TabIndex = 1;
-            this.DeckPictureBox.TabStop = false;
-            this.DeckPictureBox.Click += new System.EventHandler(this.DeckPictureBox_Click);
+            this.pbStart.Location = new System.Drawing.Point(595, 12);
+            this.pbStart.Name = "pbStart";
+            this.pbStart.Size = new System.Drawing.Size(170, 114);
+            this.pbStart.TabIndex = 4;
+            this.pbStart.TabStop = false;
             // 
-            // CardTossPictureBox
+            // pbHTP
             // 
-            this.CardTossPictureBox.Location = new System.Drawing.Point(625, 15);
-            this.CardTossPictureBox.Margin = new System.Windows.Forms.Padding(275, 15, 50, 15);
-            this.CardTossPictureBox.Name = "CardTossPictureBox";
-            this.CardTossPictureBox.Size = new System.Drawing.Size(210, 241);
-            this.CardTossPictureBox.TabIndex = 0;
-            this.CardTossPictureBox.TabStop = false;
+            this.pbHTP.Location = new System.Drawing.Point(595, 141);
+            this.pbHTP.Name = "pbHTP";
+            this.pbHTP.Size = new System.Drawing.Size(170, 114);
+            this.pbHTP.TabIndex = 5;
+            this.pbHTP.TabStop = false;
+            // 
+            // pbExit
+            // 
+            this.pbExit.Location = new System.Drawing.Point(595, 275);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(170, 114);
+            this.pbExit.TabIndex = 6;
+            this.pbExit.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 753);
-            this.Controls.Add(this.Table);
+            this.ClientSize = new System.Drawing.Size(734, 401);
+            this.Controls.Add(this.pbExit);
+            this.Controls.Add(this.pbHTP);
+            this.Controls.Add(this.pbStart);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.htpButton);
+            this.Controls.Add(this.startButton);
+            this.Controls.Add(this.MenuPictureBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Table.ResumeLayout(false);
-            this.DeckAndTossFlow.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DeckPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardTossPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHTP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel Table;
-        private System.Windows.Forms.FlowLayoutPanel opponentCardsFlow;
-        private System.Windows.Forms.FlowLayoutPanel playerCardsFlow;
-        private System.Windows.Forms.FlowLayoutPanel DeckAndTossFlow;
-        private System.Windows.Forms.PictureBox DeckPictureBox;
-        private System.Windows.Forms.PictureBox CardTossPictureBox;
+        private System.Windows.Forms.PictureBox MenuPictureBox;
+        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button htpButton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox pbStart;
+        private System.Windows.Forms.PictureBox pbHTP;
+        private System.Windows.Forms.PictureBox pbExit;
     }
 }
 

@@ -19,6 +19,10 @@ namespace UNO_game
         public Deck deck;
         public Opponent opp;
         public Player player;
+        private bool TURN = false;
+        private Card lastCard = null;
+        private Dictionary<PictureBox, Card> playerCardMap;
+        private Dictionary<PictureBox, Card> oppCardMap;
         public Game()
         {
             InitializeComponent();
@@ -26,6 +30,8 @@ namespace UNO_game
             player = new Player();
             opp = new Opponent();
             deck = new Deck();
+            playerCardMap = new Dictionary<PictureBox, Card>();
+            playerCardMap = new Dictionary<PictureBox, Card>();
             loadDeck();
             loadOpponentsCards();
             loadPlayerCards();
@@ -110,6 +116,7 @@ namespace UNO_game
                         };
                         playerCardsFlow.Controls.Add(card);
                         playerHand.Add(card);
+                        playerCardMap[card] = player.playerCards[i];
                         card.Click += CardPictureBox_Click;
                         break;
                     }
@@ -120,20 +127,83 @@ namespace UNO_game
         private void CardPictureBox_Click(object sender, EventArgs e)
         {
             PictureBox card = sender as PictureBox;
+            Card c = playerCardMap[card];
 
-            if (card != null)
+            if (checkLogic(c))
             {
+                CardTossPictureBox.Image = card.Image;
+                lastCard = c;
                 playerHand.Remove(card);
                 playerCardsFlow.Controls.Remove(card);
-            }
-            Card c = sender as Card;
-            if (c != null)
-            {
                 player.playerCards.Remove(c);
+                // treba turn da se stae na true za da IGRA OPP
             }
-            CardTossPictureBox.Image = card.Image;
+            
         }
+        private bool checkLogic(Card c)
+        {
+            if (lastCard == null)
+            {
+                return true;
+            }
+            //normal ili wildcard
+            //ako normal -> dali e broj, skip ili reverse
 
+
+            if (lastCard.type == TYPE.NORMAL && c.type == TYPE.NORMAL)
+            {
+                ColorCard playerCard = c as ColorCard;
+                ColorCard card = lastCard as ColorCard;
+                if (card.color == playerCard.color)
+                {
+
+                    if (card.picker)
+                    {
+                        addTwoCards();
+                        return true;
+                    }
+                    if (card.skip)
+                    {
+                        skipTurn();
+                        return true;
+                    }
+                    return true;
+
+                }
+                if (card.number.Equals(playerCard.number))
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            else if (lastCard.type == TYPE.WILDCARD && c.type == TYPE.NORMAL)
+            {
+                ColorCard playerCard = c as ColorCard;
+                BlackCard card = lastCard as BlackCard;
+
+                //da se dopishe dali e ista bojata i dali e +2, skip 
+            }
+            else if(lastCard.type == TYPE.NORMAL && c.type == TYPE.WILDCARD)
+            {
+                //show dialog i da se kazhe boja i +4
+                return true;
+            }
+            else if(lastCard.type == TYPE.WILDCARD && c.type == TYPE.WILDCARD)
+            {
+                //da se kazhe dali e +4 i dali mozhe da se smeni boja
+                return true;
+            }
+            return false;
+        }
+        private void addTwoCards()
+        {
+            
+        }
+        private void skipTurn()
+        {
+
+        }
         private void DeckPictureBox_Click(object sender, EventArgs e)
         {
             Random random = new Random();
@@ -154,7 +224,9 @@ namespace UNO_game
             deck.removeCard(c);
             playerHand.Add(pb);
             playerCardsFlow.Controls.Add(pb);
+            playerCardMap[pb] = c;
             checkHandSize();
+
         }
 
         private void checkHandSize()

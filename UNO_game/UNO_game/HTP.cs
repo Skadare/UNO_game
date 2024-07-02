@@ -16,5 +16,10 @@ namespace UNO_game
         {
             InitializeComponent();
         }
+
+        private void HTP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

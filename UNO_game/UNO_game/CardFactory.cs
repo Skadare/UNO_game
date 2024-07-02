@@ -21,7 +21,7 @@ namespace UNO_game
             string[] karta = png[0].Split('_');
             //blue 0 
             string color = karta[0].ToUpper();
-            if (karta[0].Contains("red") || karta[0].Contains("blue") || karta[0].Contains("yelow") || karta[0].Contains("green"))
+            if (karta[0].Contains("red") || karta[0].Contains("blue") || karta[0].Contains("yellow") || karta[0].Contains("green"))
             {
                 Boja c = Boja.RED;
                 if (color.Equals("BLUE"))
@@ -41,7 +41,7 @@ namespace UNO_game
                 else
                     number = int.Parse(karta[1]);
 
-                ColorCard card = new ColorCard(TYPE.NORMAL, c,data, number, picker, skip);
+                ColorCard card = new ColorCard(TYPE.NORMAL, c, data, number, picker, skip);
                 return card;             
 
             }

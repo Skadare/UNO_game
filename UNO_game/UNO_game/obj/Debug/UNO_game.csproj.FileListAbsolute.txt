@@ -51,3 +51,15 @@ D:\Users\HP\Desktop\Dare\VP\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.Gene
 D:\Users\HP\Desktop\Dare\VP\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
 D:\Users\HP\Desktop\Dare\VP\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.exe
 D:\Users\HP\Desktop\Dare\VP\UNO\UNO_game\UNO_game\obj\Debug\UNO_game.pdb
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\bin\Debug\UNO_game.exe.config
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\bin\Debug\UNO_game.exe
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\bin\Debug\UNO_game.pdb
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.AssemblyReference.cache
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.Form1.resources
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.Game.resources
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.HTP.resources
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.Properties.Resources.resources
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.GenerateResource.cache
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.exe
+C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.pdb

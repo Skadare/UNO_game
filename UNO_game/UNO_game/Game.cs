@@ -87,6 +87,7 @@ namespace UNO_game
                 opponentHand.Add(card);
 
             }
+            changeSizeOpponent();
          }
 
         private void loadPlayerCards()
@@ -138,7 +139,8 @@ namespace UNO_game
                 player.playerCards.Remove(c);
                 TURN = true;
                 // treba turn da se stae na true za da IGRA OPP
-
+                changeSize();
+                
             }
 
             
@@ -212,6 +214,8 @@ namespace UNO_game
         private void DeckPictureBox_Click(object sender, EventArgs e)
         {
             Random random = new Random();
+            //ako e deck ispraznet restart game
+
             int index = random.Next(deck.cards.Count - 1);
             int test = deck.cards.Count;
             player.addCard(deck.cards[index]);
@@ -230,23 +234,56 @@ namespace UNO_game
             playerHand.Add(pb);
             playerCardsFlow.Controls.Add(pb);
             playerCardMap[pb] = c;
-            checkHandSize();
-
+           
+            changeSize();
         }
 
-        private void checkHandSize()
+       
+        private void changeSize()
         {
-            int golemina = 0;
-            foreach(PictureBox pb in playerHand)
-            {
-                golemina+= pb.Width;
-            }
-            if(golemina >= playerCardsFlow.Width)
+            int smallWidth = 70;
+            int smallHeight = 122;
+            int largeWidth = 130;
+            int largeHeight = 182;
+
+            if (playerHand.Count >= 10)
             {
                 foreach (PictureBox pb in playerHand)
                 {
-                    pb.Width -= 50;
-                    pb.Height -= 50;
+                    pb.Width = smallWidth;
+                    pb.Height = smallHeight;
+                }
+            }
+            else
+            {
+                foreach (PictureBox pb in playerHand)
+                {
+                    pb.Width = largeWidth;
+                    pb.Height = largeHeight;
+                }
+            }
+        }
+        private void  changeSizeOpponent()
+        {
+            int smallWidth = 70;
+            int smallHeight = 122;
+            int largeWidth = 130;
+            int largeHeight = 182;
+
+            if (opponentHand.Count >=8)
+            {
+                foreach (PictureBox pb in opponentHand)
+                {
+                    pb.Width = smallWidth;
+                    pb.Height = smallHeight;
+                }
+            }
+            else
+            {
+                foreach (PictureBox pb in opponentHand)
+                {
+                    pb.Width = largeWidth;
+                    pb.Height = largeHeight;
                 }
             }
         }
@@ -263,7 +300,7 @@ namespace UNO_game
                     opponentHand.Remove(opponentHand[opponentHand.Count-1]);
                     CardTossPictureBox.Image = Image.FromFile(c.path);
                     lastCard = c;
-
+                    changeSizeOpponent();
                     return true;
                 }
             }
@@ -292,7 +329,7 @@ namespace UNO_game
                     };
                     opponentHand.Add(card);
                     opponentCardsFlow.Controls.Add(card);
-
+                    changeSizeOpponent();
 
                 }
                 TURN = false;

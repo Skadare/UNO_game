@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\uno_game\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\opponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\htp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\uno_game\\htp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\htp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -62,17 +62,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Game.cs",
               "RelativeDocumentMoniker": "UNO_game\\Game.cs",
               "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Game.cs",
               "RelativeToolTip": "UNO_game\\Game.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAA4AAAA",
+              "ViewState": "AQIAANAAAAAAAAAAAAAcwNkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T15:18:11.22Z",
               "IsPinned": true,
@@ -88,8 +88,7 @@
               "RelativeToolTip": "UNO_game\\Opponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:25:25.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:25:25.547Z"
             },
             {
               "$type": "Document",
@@ -125,8 +124,7 @@
               "RelativeToolTip": "UNO_game\\Form1.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T14:54:25.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T14:54:25.021Z"
             },
             {
               "$type": "Document",
@@ -137,8 +135,7 @@
               "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\HTP.cs [Design]",
               "RelativeToolTip": "UNO_game\\HTP.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:38:27.759Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T13:38:27.759Z"
             },
             {
               "$type": "Document",
@@ -161,20 +158,18 @@
               "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Form1.cs [Design]",
               "RelativeToolTip": "UNO_game\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T14:26:19.053Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-28T14:26:19.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Game.cs",
               "RelativeDocumentMoniker": "UNO_game\\Game.cs",
               "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Game.cs [Design]",
               "RelativeToolTip": "UNO_game\\Game.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:36:03.054Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T13:36:03.054Z"
             },
             {
               "$type": "Document",
@@ -222,8 +217,7 @@
               "RelativeToolTip": "UNO_game\\HTP.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwBUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T13:37:54.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T13:37:54.431Z"
             }
           ]
         }

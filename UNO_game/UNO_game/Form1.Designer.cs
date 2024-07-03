@@ -45,8 +45,9 @@
             // 
             this.MenuPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MenuPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.MenuPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuPictureBox.Name = "MenuPictureBox";
-            this.MenuPictureBox.Size = new System.Drawing.Size(734, 401);
+            this.MenuPictureBox.Size = new System.Drawing.Size(979, 494);
             this.MenuPictureBox.TabIndex = 0;
             this.MenuPictureBox.TabStop = false;
             // 
@@ -54,9 +55,10 @@
             // 
             this.startButton.AllowDrop = true;
             this.startButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startButton.Location = new System.Drawing.Point(635, 52);
+            this.startButton.Location = new System.Drawing.Point(847, 64);
+            this.startButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(77, 29);
+            this.startButton.Size = new System.Drawing.Size(103, 36);
             this.startButton.TabIndex = 1;
             this.startButton.Text = "Start Game";
             this.startButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -66,9 +68,10 @@
             // htpButton
             // 
             this.htpButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.htpButton.Location = new System.Drawing.Point(635, 185);
+            this.htpButton.Location = new System.Drawing.Point(847, 228);
+            this.htpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.htpButton.Name = "htpButton";
-            this.htpButton.Size = new System.Drawing.Size(87, 28);
+            this.htpButton.Size = new System.Drawing.Size(116, 34);
             this.htpButton.TabIndex = 2;
             this.htpButton.Text = "How To Play";
             this.htpButton.UseVisualStyleBackColor = true;
@@ -77,9 +80,10 @@
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(635, 317);
+            this.exitButton.Location = new System.Drawing.Point(847, 390);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(77, 27);
+            this.exitButton.Size = new System.Drawing.Size(103, 33);
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -87,33 +91,36 @@
             // 
             // pbStart
             // 
-            this.pbStart.Location = new System.Drawing.Point(595, 12);
+            this.pbStart.Location = new System.Drawing.Point(793, 15);
+            this.pbStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbStart.Name = "pbStart";
-            this.pbStart.Size = new System.Drawing.Size(170, 114);
+            this.pbStart.Size = new System.Drawing.Size(227, 140);
             this.pbStart.TabIndex = 4;
             this.pbStart.TabStop = false;
             // 
             // pbHTP
             // 
-            this.pbHTP.Location = new System.Drawing.Point(595, 141);
+            this.pbHTP.Location = new System.Drawing.Point(793, 174);
+            this.pbHTP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbHTP.Name = "pbHTP";
-            this.pbHTP.Size = new System.Drawing.Size(170, 114);
+            this.pbHTP.Size = new System.Drawing.Size(227, 140);
             this.pbHTP.TabIndex = 5;
             this.pbHTP.TabStop = false;
             // 
             // pbExit
             // 
-            this.pbExit.Location = new System.Drawing.Point(595, 275);
+            this.pbExit.Location = new System.Drawing.Point(793, 338);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(170, 114);
+            this.pbExit.Size = new System.Drawing.Size(227, 140);
             this.pbExit.TabIndex = 6;
             this.pbExit.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 401);
+            this.ClientSize = new System.Drawing.Size(979, 494);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.pbHTP);
             this.Controls.Add(this.pbStart);
@@ -121,7 +128,7 @@
             this.Controls.Add(this.htpButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.MenuPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

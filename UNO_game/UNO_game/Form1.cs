@@ -17,6 +17,7 @@ namespace UNO_game
         {
          InitializeComponent();
             loadMenu();
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)

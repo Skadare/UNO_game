@@ -63,3 +63,5 @@ C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.csproj
 C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.csproj.CoreCompileInputs.cache
 C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.exe
 C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.pdb
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.Game.resources
+C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.HTP.resources

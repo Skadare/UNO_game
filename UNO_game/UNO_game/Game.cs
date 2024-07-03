@@ -136,15 +136,20 @@ namespace UNO_game
                 playerHand.Remove(card);
                 playerCardsFlow.Controls.Remove(card);
                 player.playerCards.Remove(c);
+                TURN = true;
                 // treba turn da se stae na true za da IGRA OPP
+
             }
+
             
         }
         private bool checkLogic(Card c)
         {
             if (lastCard == null)
             {
+                timer1.Start();
                 return true;
+                
             }
             //normal ili wildcard
             //ako normal -> dali e broj, skip ili reverse
@@ -211,7 +216,7 @@ namespace UNO_game
             int test = deck.cards.Count;
             player.addCard(deck.cards[index]);
             Card c = deck.cards[index];
-
+            TURN = true;
             PictureBox pb = new PictureBox
             {
                 Image = Image.FromFile(c.path),
@@ -244,6 +249,61 @@ namespace UNO_game
                     pb.Height -= 50;
                 }
             }
+        }
+        private bool checkOpponent()
+        {
+            for(int i =0;i< opp.oppCards.Count;i++)
+            {
+                Card c = opp.oppCards[i];
+                if (checkLogic(c))
+                {
+                    opp.oppCards.Remove(c);
+
+                    opponentCardsFlow.Controls.Remove(opponentHand[opponentHand.Count - 1]);
+                    opponentHand.Remove(opponentHand[opponentHand.Count-1]);
+                    CardTossPictureBox.Image = Image.FromFile(c.path);
+                    lastCard = c;
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TURN)
+            {
+               if( !checkOpponent())
+                {
+                    //treba da vlece od deck
+
+                    opp.oppCards.Add(opponentFromDeck());
+                    
+                    deck.cards.Remove(deck.cards[deck.cards.Count-1]);
+                    string[] cardfile = Directory.GetFiles(Path.Combine(Application.StartupPath, "Back"), "*.png");
+                    PictureBox card = new PictureBox
+                    {
+                        Image = Image.FromFile(cardfile[0]),
+                        Width = 130,
+                        Height = 182,
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Margin = new Padding(5)
+                    };
+                    opponentHand.Add(card);
+                    opponentCardsFlow.Controls.Add(card);
+
+
+                }
+                TURN = false;
+
+            }
+        }
+        private Card opponentFromDeck()
+        {
+           
+
+            return deck.cards[deck.cards.Count - 1];
         }
     }
 }

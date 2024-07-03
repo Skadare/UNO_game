@@ -65,3 +65,5 @@ C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.exe
 C:\Users\X\OneDrive\Desktop\UNO_igra\UNO_game\UNO_game\obj\Debug\UNO_game.pdb
 C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.Game.resources
 C:\Users\LENOVO!\Desktop\unoZaStefan\UNO_game\UNO_game\obj\Debug\UNO_game.HTP.resources
+F:\user.dare\Desktop\UNO_game\UNO_game\UNO_game\obj\Debug\UNO_game.HTP.resources
+F:\user.dare\Desktop\UNO_game\UNO_game\UNO_game\obj\Debug\UNO_game.Color_Picker.resources

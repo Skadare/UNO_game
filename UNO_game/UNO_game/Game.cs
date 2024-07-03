@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UNO_game
@@ -15,14 +10,13 @@ namespace UNO_game
     {
         private List<PictureBox> playerHand;
         private List<PictureBox> opponentHand;
-        private PictureBox selectedCard;
         public Deck deck;
         public Opponent opp;
         public Player player;
         private bool TURN = false;
         private Card lastCard = null;
         private Dictionary<PictureBox, Card> playerCardMap;
-        private Dictionary<PictureBox, Card> oppCardMap;
+        public Boja currentBoja;
         public Game()
         {
             InitializeComponent();
@@ -35,6 +29,7 @@ namespace UNO_game
             loadDeck();
             loadOpponentsCards();
             loadPlayerCards();
+            unoButton.Visible = false;
             this.DoubleBuffered = true;
         }
 
@@ -62,67 +57,20 @@ namespace UNO_game
             {
                 deck.addCard(CardFactory.createCard(cardFile));
             }
+            turnStatusLabel.Text = String.Format("Turn: Player");
         }
         private void loadOpponentsCards()
         {
             opponentHand = new List<PictureBox>();
-            Random random = new Random();
-            string[] cardfile = Directory.GetFiles(Path.Combine(Application.StartupPath, "Back"), "*.png");
-
-            for (int i = 0; i < 6; i++)
-            {
-                int index = random.Next(deck.cards.Count - 1);
-                opp.addCard(deck.cards[index]);
-                deck.removeCard(deck.cards[index]);
-
-                PictureBox card = new PictureBox
-                {
-                    Image = Image.FromFile(cardfile[0]),
-                    Width = 130,
-                    Height = 182,
-                    SizeMode = PictureBoxSizeMode.StretchImage,
-                    Margin = new Padding(5)
-                };
-                opponentCardsFlow.Controls.Add(card);
-                opponentHand.Add(card);
-
-            }
-            changeSizeOpponent();
-         }
+            addCards(6);
+            TURN = true;
+        }
 
         private void loadPlayerCards()
         {
             playerHand = new List<PictureBox>();
-            Random random = new Random();
-            for (int i = 0; i < 6; i++)
-            {
-                int index = random.Next(deck.cards.Count - 1);
-                player.addCard(deck.cards[index]);
-                deck.removeCard(deck.cards[index]);
-            }
-            string[] cardFiles = Directory.GetFiles(Path.Combine(Application.StartupPath, "Images"), "*.png");
-            for (int i = 0; i < player.playerCards.Count; i++)
-            {
-                foreach (String cardfile in cardFiles)
-                {
-                    if (cardfile.Equals(player.playerCards[i].path))
-                    {
-                        PictureBox card = new PictureBox
-                        {
-                            Image = Image.FromFile(cardfile),
-                            Width = 130,
-                            Height = 182,
-                            SizeMode = PictureBoxSizeMode.StretchImage,
-                            Margin = new Padding(5)
-                        };
-                        playerCardsFlow.Controls.Add(card);
-                        playerHand.Add(card);
-                        playerCardMap[card] = player.playerCards[i];
-                        card.Click += CardPictureBox_Click;
-                        break;
-                    }
-                }
-            }
+            addCards(6);
+            TURN = false;
         }
 
         private void CardPictureBox_Click(object sender, EventArgs e)
@@ -132,30 +80,51 @@ namespace UNO_game
 
             if (checkLogic(c))
             {
+
                 CardTossPictureBox.Image = card.Image;
                 lastCard = c;
                 playerHand.Remove(card);
                 playerCardsFlow.Controls.Remove(card);
                 player.playerCards.Remove(c);
-                TURN = true;
-                // treba turn da se stae na true za da IGRA OPP
+                TURN = !TURN;
+                if (!TURN)
+                    turnStatusLabel.Text = String.Format("Turn: Player");
+                else {
+                    turnStatusLabel.Text = String.Format("Turn: BOT");
+                    playerCardsFlow.Enabled = false;
+                    DeckPictureBox.Enabled = false;
+                }
+                CheckStateOfGame();
                 changeSize();
-                
-            }
 
-            
+            }
         }
         private bool checkLogic(Card c)
         {
             if (lastCard == null)
             {
+                if (c.type == TYPE.NORMAL)
+                {
+                    ColorCard playerCard = c as ColorCard;
+                    if (playerCard.picker)
+                        addCards(2);
+                    if (playerCard.skip || playerCard.reverse)
+                        skipTurn();
+                    currentBoja = playerCard.color;
+                }
+                else
+                {
+                    BlackCard playerCard = c as BlackCard;
+                    if (playerCard.picker_and_change)
+                        addCards(4);
+                    Color_Picker color = new Color_Picker();
+                    color.ShowDialog();
+                    currentBoja = color.selectedColor;
+                }
+                colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja.ToString());
                 timer1.Start();
                 return true;
-                
             }
-            //normal ili wildcard
-            //ako normal -> dali e broj, skip ili reverse
-
 
             if (lastCard.type == TYPE.NORMAL && c.type == TYPE.NORMAL)
             {
@@ -163,22 +132,45 @@ namespace UNO_game
                 ColorCard card = lastCard as ColorCard;
                 if (card.color == playerCard.color)
                 {
-
-                    if (card.picker)
+                    currentBoja = playerCard.color;
+                    colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja);
+                    if (playerCard.picker)
                     {
-                        addTwoCards();
+                        addCards(2);
                         return true;
                     }
-                    if (card.skip)
+                    if (playerCard.skip)
+                    {
+                        skipTurn();
+                        return true;
+                    }
+                    if (playerCard.reverse)
                     {
                         skipTurn();
                         return true;
                     }
                     return true;
-
                 }
-                if (card.number.Equals(playerCard.number))
+
+                if (playerCard.picker && card.picker)
                 {
+                    addCards(2);
+                    currentBoja = playerCard.color;
+                    colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja);
+                    return true;
+                }
+                if ((playerCard.skip && card.skip) || (playerCard.reverse && card.reverse))
+                {
+                    skipTurn();
+                    currentBoja = playerCard.color;
+                    colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja);
+                    return true;
+                }
+
+                if (card.number.Equals(playerCard.number) && card.number != -1)
+                {
+                    currentBoja = playerCard.color;
+                    colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja);
                     return true;
                 }
 
@@ -188,47 +180,148 @@ namespace UNO_game
             {
                 ColorCard playerCard = c as ColorCard;
                 BlackCard card = lastCard as BlackCard;
-
-                //da se dopishe dali e ista bojata i dali e +2, skip 
+                if (playerCard.color == currentBoja)
+                {
+                    if (playerCard.picker)
+                        addCards(2);
+                    if (playerCard.skip || playerCard.reverse)
+                        skipTurn();
+                    return true;
+                }
             }
-            else if(lastCard.type == TYPE.NORMAL && c.type == TYPE.WILDCARD)
+            else if (lastCard.type == TYPE.NORMAL && c.type == TYPE.WILDCARD)
             {
-                //show dialog i da se kazhe boja i +4
+                BlackCard playerCard = c as BlackCard;
+
+                if (!TURN)
+                {
+                    Color_Picker color = new Color_Picker();
+                    color.ShowDialog();
+                    currentBoja = color.selectedColor;
+                }
+                else
+                {
+                    currentBoja = opp.getBestColor();
+                }
+                colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja);
+                if (playerCard.picker_and_change)
+                    addCards(4);
                 return true;
             }
-            else if(lastCard.type == TYPE.WILDCARD && c.type == TYPE.WILDCARD)
+            else if (lastCard.type == TYPE.WILDCARD && c.type == TYPE.WILDCARD)
             {
-                //da se kazhe dali e +4 i dali mozhe da se smeni boja
+                BlackCard playerCard = c as BlackCard;
+                if (!TURN)
+                {
+                    Color_Picker color = new Color_Picker();
+                    color.ShowDialog();
+                    currentBoja = color.selectedColor;
+                }
+                else
+                {
+                    currentBoja = opp.getBestColor();
+                }
+                colorStatusLabel.Text = String.Format("Current color: {0}", currentBoja);
+                if (playerCard.picker_and_change)
+                {
+                    addCards(4);
+                }
                 return true;
             }
             return false;
         }
-        private void addTwoCards()
-        {
-            
-        }
+
         private void skipTurn()
         {
+            if (!TURN)
+            {
+                TURN = true;
+            }
+            else
+            {
+                TURN = false;
+                turnStatusLabel.Text = String.Format("Turn: BOT");
+            }
 
         }
+
+        private void addCards(int numOfCards)
+        {
+            Random random = new Random();
+            if (!TURN)
+            {
+                string[] cardfile = Directory.GetFiles(Path.Combine(Application.StartupPath, "Back"), "*.png");
+
+                for (int i = 0; i < numOfCards; i++)
+                {
+                    int index = random.Next(deck.cards.Count - 1);
+                    opp.addCard(deck.cards[index]);
+                    deck.removeCard(deck.cards[index]);
+
+                    PictureBox card = new PictureBox
+                    {
+                        Image = Image.FromFile(cardfile[0]),
+                        Width = 130,
+                        Height = 182,
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Margin = new Padding(5)
+                    };
+                    opponentCardsFlow.Controls.Add(card);
+                    opponentHand.Add(card);
+                }
+                changeSizeOpponent();
+            }
+            else
+            {
+                int broj = player.playerCards.Count;
+                for (int i = 0; i < numOfCards; i++)
+                {
+                    int index = random.Next(deck.cards.Count - 1);
+                    player.addCard(deck.cards[index]);
+                    deck.removeCard(deck.cards[index]);
+                }
+                string[] cardFiles = Directory.GetFiles(Path.Combine(Application.StartupPath, "Images"), "*.png");
+                for (int i = broj; i < player.playerCards.Count; i++)
+                {
+                    foreach (String cardfile in cardFiles)
+                    {
+                        if (cardfile.Equals(player.playerCards[i].path))
+                        {
+                            PictureBox card = new PictureBox
+                            {
+                                Image = Image.FromFile(cardfile),
+                                Width = 130,
+                                Height = 182,
+                                SizeMode = PictureBoxSizeMode.StretchImage,
+                                Margin = new Padding(5)
+                            };
+                            playerCardsFlow.Controls.Add(card);
+                            playerHand.Add(card);
+                            playerCardMap[card] = player.playerCards[i];
+                            card.Click += CardPictureBox_Click;
+                            break;
+
+                        }
+                    }
+                }
+
+            }
+        }
+
         private void DeckPictureBox_Click(object sender, EventArgs e)
         {
             Random random = new Random();
             //ako e deck ispraznet restart game
-               if(deck.cards.Count==0)
+            if (deck.cards.Count == 0)
             {
-                DialogResult dr = MessageBox.Show("The deck is empty. Click YES if you want to exit the game, or NO if you want to restart the game.","Game Over", MessageBoxButtons.YesNo);
-                if(dr==DialogResult.Yes)
+                DialogResult dr = MessageBox.Show("The deck is empty. Click YES if you want to exit the game, or NO if you want to restart the game.", "Game Over", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
                 {
                     this.Close();
-                   
-                   
                 }
                 else
                 {
-                    
                     RestartGame();
-                    
                 }
                 return;
 
@@ -251,11 +344,10 @@ namespace UNO_game
             playerHand.Add(pb);
             playerCardsFlow.Controls.Add(pb);
             playerCardMap[pb] = c;
-           
+            turnStatusLabel.Text = String.Format("Turn: BOT");
             changeSize();
         }
 
-       
         private void changeSize()
         {
             int smallWidth = 70;
@@ -280,14 +372,14 @@ namespace UNO_game
                 }
             }
         }
-        private void  changeSizeOpponent()
+        private void changeSizeOpponent()
         {
             int smallWidth = 70;
             int smallHeight = 122;
             int largeWidth = 130;
             int largeHeight = 182;
 
-            if (opponentHand.Count >=8)
+            if (opponentHand.Count >= 8)
             {
                 foreach (PictureBox pb in opponentHand)
                 {
@@ -306,15 +398,14 @@ namespace UNO_game
         }
         private bool checkOpponent()
         {
-            for(int i =0;i< opp.oppCards.Count;i++)
+            for (int i = 0; i < opp.oppCards.Count; i++)
             {
                 Card c = opp.oppCards[i];
                 if (checkLogic(c))
                 {
                     opp.oppCards.Remove(c);
-
                     opponentCardsFlow.Controls.Remove(opponentHand[opponentHand.Count - 1]);
-                    opponentHand.Remove(opponentHand[opponentHand.Count-1]);
+                    opponentHand.Remove(opponentHand[opponentHand.Count - 1]);
                     CardTossPictureBox.Image = Image.FromFile(c.path);
                     lastCard = c;
                     changeSizeOpponent();
@@ -328,13 +419,10 @@ namespace UNO_game
         {
             if (TURN)
             {
-               if( !checkOpponent())
+                if (!checkOpponent())
                 {
-                    //treba da vlece od deck
-
                     opp.oppCards.Add(opponentFromDeck());
-                    
-                    deck.cards.Remove(deck.cards[deck.cards.Count-1]);
+                    deck.cards.Remove(deck.cards[deck.cards.Count - 1]);
                     string[] cardfile = Directory.GetFiles(Path.Combine(Application.StartupPath, "Back"), "*.png");
                     PictureBox card = new PictureBox
                     {
@@ -347,16 +435,24 @@ namespace UNO_game
                     opponentHand.Add(card);
                     opponentCardsFlow.Controls.Add(card);
                     changeSizeOpponent();
-
                 }
-                TURN = false;
-
+                CheckStateOfGame();
+                TURN = !TURN;
+                if (!TURN)
+                {
+                    turnStatusLabel.Text = String.Format("Turn: Player");
+                    playerCardsFlow.Enabled = true;
+                    DeckPictureBox.Enabled = true;
+                }
+                else
+                {
+                    turnStatusLabel.Text = String.Format("Turn: BOT");
+                }
             }
         }
+
         private Card opponentFromDeck()
         {
-           
-
             return deck.cards[deck.cards.Count - 1];
         }
         private void RestartGame()
@@ -365,6 +461,56 @@ namespace UNO_game
             Game g = new Game();
             g.ShowDialog();
 
+        }
+        private void CheckStateOfGame()
+        {
+
+            if (player.playerCards.Count == 0)
+            {
+                timer1.Stop();
+                DialogResult dr = MessageBox.Show("YOU WON!!! CONGRATULATIONS!\n"
+                    + "Would you like to play another one?", "Game Over", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes) {
+                    RestartGame();
+                }
+                else this.Close();
+            }
+            else if (opp.oppCards.Count == 0)
+            {
+                timer1.Stop();
+                DialogResult dr = MessageBox.Show("You lost :(\n"
+                    + "Would you like to play another one?", "Game Over", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    RestartGame();
+                }
+                else this.Close();
+            }
+
+            if (player.playerCards.Count == 1)
+            {   
+                TURN = false;
+                unoButton.Visible = true;
+                timer2.Start();
+                
+            }
+        }
+        
+        private void unoButton_Click(object sender, EventArgs e)
+        {
+            timer2.Stop();
+            unoButton.Visible = false;
+            TURN = true;
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            TURN = true;
+            unoButton.Visible=false;
+            addCards(2);
+            turnStatusLabel.Text = "Turn: BOT";
+            timer2.Stop();
         }
     }
 }

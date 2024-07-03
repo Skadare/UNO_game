@@ -30,77 +30,82 @@
         {
             this.cardPB = new System.Windows.Forms.PictureBox();
             this.redPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.greenPB = new System.Windows.Forms.PictureBox();
+            this.yellowPB = new System.Windows.Forms.PictureBox();
+            this.bluePB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cardPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yellowPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bluePB)).BeginInit();
             this.SuspendLayout();
             // 
             // cardPB
             // 
-            this.cardPB.Location = new System.Drawing.Point(0, -3);
+            this.cardPB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardPB.Location = new System.Drawing.Point(0, 0);
+            this.cardPB.Margin = new System.Windows.Forms.Padding(2);
             this.cardPB.Name = "cardPB";
-            this.cardPB.Size = new System.Drawing.Size(293, 396);
+            this.cardPB.Size = new System.Drawing.Size(271, 382);
             this.cardPB.TabIndex = 0;
             this.cardPB.TabStop = false;
+            this.cardPB.Click += new System.EventHandler(this.cardPB_Click);
             // 
             // redPB
             // 
-            this.redPB.Location = new System.Drawing.Point(114, 195);
+            this.redPB.Location = new System.Drawing.Point(102, 62);
             this.redPB.Name = "redPB";
-            this.redPB.Size = new System.Drawing.Size(51, 75);
+            this.redPB.Size = new System.Drawing.Size(70, 85);
             this.redPB.TabIndex = 1;
             this.redPB.TabStop = false;
-            this.redPB.Click += new System.EventHandler(this.redPB_Click);
+            this.redPB.Click += new System.EventHandler(this.redPB_Click_1);
             // 
-            // pictureBox1
+            // greenPB
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(114, 102);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 87);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.greenPB.Location = new System.Drawing.Point(102, 227);
+            this.greenPB.Name = "greenPB";
+            this.greenPB.Size = new System.Drawing.Size(70, 85);
+            this.greenPB.TabIndex = 2;
+            this.greenPB.TabStop = false;
+            this.greenPB.Click += new System.EventHandler(this.greenPB_Click);
             // 
-            // pictureBox2
+            // yellowPB
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(161, 166);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(82, 47);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.yellowPB.Location = new System.Drawing.Point(174, 154);
+            this.yellowPB.Name = "yellowPB";
+            this.yellowPB.Size = new System.Drawing.Size(85, 70);
+            this.yellowPB.TabIndex = 3;
+            this.yellowPB.TabStop = false;
+            this.yellowPB.Click += new System.EventHandler(this.yellowPB_Click);
             // 
-            // pictureBox3
+            // bluePB
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(33, 166);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(82, 47);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.bluePB.Location = new System.Drawing.Point(12, 154);
+            this.bluePB.Name = "bluePB";
+            this.bluePB.Size = new System.Drawing.Size(85, 70);
+            this.bluePB.TabIndex = 4;
+            this.bluePB.TabStop = false;
+            this.bluePB.Click += new System.EventHandler(this.bluePB_Click);
             // 
             // Color_Picker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 386);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(271, 382);
+            this.Controls.Add(this.bluePB);
+            this.Controls.Add(this.yellowPB);
+            this.Controls.Add(this.greenPB);
             this.Controls.Add(this.redPB);
             this.Controls.Add(this.cardPB);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Color_Picker";
-            this.Text = "Color_Picker";
+            this.Text = "Click on a color!";
             this.Load += new System.EventHandler(this.Color_Picker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cardPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yellowPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bluePB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,8 +114,8 @@
 
         private System.Windows.Forms.PictureBox cardPB;
         private System.Windows.Forms.PictureBox redPB;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox greenPB;
+        private System.Windows.Forms.PictureBox yellowPB;
+        private System.Windows.Forms.PictureBox bluePB;
     }
 }

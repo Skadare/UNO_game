@@ -34,14 +34,17 @@ namespace UNO_game
                 int number = -1;
                 bool skip = false;
                 bool picker = false;
-                if (karta[1].Equals("skip") || karta[1].Equals("reverse"))
+                bool reverse = false;
+                if (karta[1].Equals("skip"))
                     skip = true;
+                else if (karta[1].Equals("reverse"))
+                    reverse = true;
                 else if (karta[1].Equals("picker"))
                     picker = true;
                 else
                     number = int.Parse(karta[1]);
 
-                ColorCard card = new ColorCard(TYPE.NORMAL, c, data, number, picker, skip);
+                ColorCard card = new ColorCard(TYPE.NORMAL, c, data, number, picker, skip, reverse);
                 return card;             
 
             }

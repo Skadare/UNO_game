@@ -17,20 +17,18 @@ namespace UNO_game
         public Color_Picker()
         {
             InitializeComponent();
-            //293; 430
             loadCard();
-
-            
-
         }
 
         private void Color_Picker_Load(object sender, EventArgs e)
         {
-            //283x396
         }
         public void loadCard() {
-            /// za doma kje go sredim
             cardPB.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Color_Picker", "wild_color_changer.png"));
+            redPB.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Color_Picker", "red_changer.png"));
+            bluePB.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Color_Picker", "blue_changer.png"));
+            yellowPB.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Color_Picker", "yellow_changer.png"));
+            greenPB.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Color_Picker", "green_changer.png"));
         }
 
         private void cardPictureBox_Click(object sender, EventArgs e)
@@ -38,20 +36,36 @@ namespace UNO_game
 
         }
 
-        private void redPB_Click(object sender, EventArgs e)
+    
+
+        private void cardPB_Click(object sender, EventArgs e)
         {
-            selectedColor = Boja.RED;
+
+        }
+
+  
+        private void yellowPB_Click(object sender, EventArgs e)
+        {
+            selectedColor= Boja.YELLOW;
             this.Close();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void bluePB_Click(object sender, EventArgs e)
         {
-
+            selectedColor = Boja.BLUE;
+            this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void greenPB_Click(object sender, EventArgs e)
         {
-            
+            selectedColor = Boja.GREEN;
+            this.Close();
+        }
+
+        private void redPB_Click_1(object sender, EventArgs e)
+        {
+            selectedColor = Boja.RED;
+            this.Close();
         }
     }
 }

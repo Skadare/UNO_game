@@ -11,12 +11,14 @@ namespace UNO_game
         public int number;
         public bool picker;
         public bool skip;
+        public bool reverse;
 
-        public ColorCard(TYPE type, Boja color, string path, int number, bool picker, bool skip) : base(type, color, path)
+        public ColorCard(TYPE type, Boja color, string path, int number, bool picker, bool skip, bool reverse) : base(type, color, path)
         {
             this.number = number;
             this.picker = picker;
             this.skip = skip;
+            this.reverse = reverse; 
         }
     }
 }

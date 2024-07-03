@@ -215,7 +215,24 @@ namespace UNO_game
         {
             Random random = new Random();
             //ako e deck ispraznet restart game
+               if(deck.cards.Count==0)
+            {
+                DialogResult dr = MessageBox.Show("The deck is empty. Click YES if you want to exit the game, or NO if you want to restart the game.","Game Over", MessageBoxButtons.YesNo);
+                if(dr==DialogResult.Yes)
+                {
+                    this.Close();
+                   
+                   
+                }
+                else
+                {
+                    
+                    RestartGame();
+                    
+                }
+                return;
 
+            }
             int index = random.Next(deck.cards.Count - 1);
             int test = deck.cards.Count;
             player.addCard(deck.cards[index]);
@@ -341,6 +358,13 @@ namespace UNO_game
            
 
             return deck.cards[deck.cards.Count - 1];
+        }
+        private void RestartGame()
+        {
+            this.Close();
+            Game g = new Game();
+            g.ShowDialog();
+
         }
     }
 }

@@ -20,11 +20,11 @@ namespace UNO_game
         public Game()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             loadTable();
             player = new Player();
             opp = new Opponent();
             deck = new Deck();
-            playerCardMap = new Dictionary<PictureBox, Card>();
             playerCardMap = new Dictionary<PictureBox, Card>();
             loadDeck();
             loadOpponentsCards();
@@ -47,6 +47,7 @@ namespace UNO_game
             opponentCardsFlow.BackgroundImage = img;
             playerCardsFlow.BackgroundImage = img;
             DeckAndTossFlow.BackgroundImage = img;
+            statusStrip1.BackgroundImage= Image.FromFile(Path.Combine(Application.StartupPath, "Table", "pozadina.jpg"));
 
         }
 
@@ -58,6 +59,7 @@ namespace UNO_game
                 deck.addCard(CardFactory.createCard(cardFile));
             }
             turnStatusLabel.Text = String.Format("Turn: Player");
+            DeckPictureBox.Enabled = false;
         }
         private void loadOpponentsCards()
         {
@@ -88,13 +90,18 @@ namespace UNO_game
                 player.playerCards.Remove(c);
                 TURN = !TURN;
                 if (!TURN)
+                {
                     turnStatusLabel.Text = String.Format("Turn: Player");
-                else {
+                    DeckPictureBox.Enabled = true;
+                }
+                else
+                {
                     turnStatusLabel.Text = String.Format("Turn: BOT");
                     playerCardsFlow.Enabled = false;
                     DeckPictureBox.Enabled = false;
                 }
                 CheckStateOfGame();
+                UNOcheck();
                 changeSize();
 
             }
@@ -254,6 +261,10 @@ namespace UNO_game
 
                 for (int i = 0; i < numOfCards; i++)
                 {
+                    if (checkDeck())
+                    {
+                        return;
+                    }
                     int index = random.Next(deck.cards.Count - 1);
                     opp.addCard(deck.cards[index]);
                     deck.removeCard(deck.cards[index]);
@@ -276,6 +287,10 @@ namespace UNO_game
                 int broj = player.playerCards.Count;
                 for (int i = 0; i < numOfCards; i++)
                 {
+                    if (checkDeck())
+                    {
+                        return;
+                    }
                     int index = random.Next(deck.cards.Count - 1);
                     player.addCard(deck.cards[index]);
                     deck.removeCard(deck.cards[index]);
@@ -311,20 +326,9 @@ namespace UNO_game
         private void DeckPictureBox_Click(object sender, EventArgs e)
         {
             Random random = new Random();
-            //ako e deck ispraznet restart game
-            if (deck.cards.Count == 0)
+            if(checkDeck())
             {
-                DialogResult dr = MessageBox.Show("The deck is empty. Click YES if you want to exit the game, or NO if you want to restart the game.", "Game Over", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes)
-                {
-                    this.Close();
-                }
-                else
-                {
-                    RestartGame();
-                }
                 return;
-
             }
             int index = random.Next(deck.cards.Count - 1);
             int test = deck.cards.Count;
@@ -345,6 +349,7 @@ namespace UNO_game
             playerCardsFlow.Controls.Add(pb);
             playerCardMap[pb] = c;
             turnStatusLabel.Text = String.Format("Turn: BOT");
+            DeckPictureBox.Enabled = false;
             changeSize();
         }
 
@@ -419,8 +424,13 @@ namespace UNO_game
         {
             if (TURN)
             {
+                
                 if (!checkOpponent())
                 {
+                    if (checkDeck())
+                    {
+                        return;
+                    }
                     opp.oppCards.Add(opponentFromDeck());
                     deck.cards.Remove(deck.cards[deck.cards.Count - 1]);
                     string[] cardfile = Directory.GetFiles(Path.Combine(Application.StartupPath, "Back"), "*.png");
@@ -436,6 +446,7 @@ namespace UNO_game
                     opponentCardsFlow.Controls.Add(card);
                     changeSizeOpponent();
                 }
+
                 CheckStateOfGame();
                 TURN = !TURN;
                 if (!TURN)
@@ -446,20 +457,45 @@ namespace UNO_game
                 }
                 else
                 {
+                    DeckPictureBox.Enabled = false;
                     turnStatusLabel.Text = String.Format("Turn: BOT");
                 }
             }
         }
+        private bool checkDeck()
+        {
+            if (deck.cards.Count == 0)
+            {
+                DialogResult dr = MessageBox.Show("The deck is empty. Click YES if you want to exit the game, or NO if you want to restart the game.", "Game Over", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Close();
+                    RestartGame();
+                }
+                return true;
+
+            }
+            return false;
+
+        }
 
         private Card opponentFromDeck()
         {
+          
             return deck.cards[deck.cards.Count - 1];
         }
         private void RestartGame()
         {
+
             this.Close();
+
             Game g = new Game();
-            g.ShowDialog();
+            g.Show();
+            
 
         }
         private void CheckStateOfGame()
@@ -486,16 +522,18 @@ namespace UNO_game
                 }
                 else this.Close();
             }
-
+        }
+        
+        private void UNOcheck()
+        {
             if (player.playerCards.Count == 1)
-            {   
+            {
                 TURN = false;
                 unoButton.Visible = true;
                 timer2.Start();
-                
+
             }
         }
-        
         private void unoButton_Click(object sender, EventArgs e)
         {
             timer2.Stop();

@@ -11,15 +11,11 @@ namespace UNO_game
     {
         public static Card createCard(string data)
         {
-            //"C:\\Users\\HP\\source\\repos\\UNO_game\\UNO_game\\bin\\Debug\\Images\\blue_0.png"
 
             string[] parts = data.Split('\\');
             string test = parts[parts.Length-1];
-            //blue_0.png
             string[] png = test.Split('.');
-            //blue_0
             string[] karta = png[0].Split('_');
-            //blue 0 
             string color = karta[0].ToUpper();
             if (karta[0].Contains("red") || karta[0].Contains("blue") || karta[0].Contains("yellow") || karta[0].Contains("green"))
             {

@@ -1,30 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|f:\\user.dare\\desktop\\uno_game\\uno_game\\uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\uno_game\\opponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\opponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\opponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\uno_game\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\uno_game\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\colorcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\colorcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\uno_game\\colorcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\colorcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\color_picker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\color_picker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\blackcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\blackcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|c:\\users\\lenovo!\\desktop\\unozastefan\\uno_game\\uno_game\\cardfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\cardfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\uno_game\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06F7413-26B8-4AF6-9611-7E07C57B7998}|UNO_game\\UNO_game.csproj|solutionrelative:uno_game\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,75 +51,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Game.cs",
-              "DocumentMoniker": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Game.cs",
-              "RelativeDocumentMoniker": "UNO_game\\Game.cs",
-              "ToolTip": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Game.cs",
-              "RelativeToolTip": "UNO_game\\Game.cs",
-              "ViewState": "AQIAAN0BAAAAAAAAAAAAAOkBAAAtAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Program.cs",
+              "RelativeDocumentMoniker": "UNO_game\\Program.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Program.cs",
+              "RelativeToolTip": "UNO_game\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T15:18:11.22Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-07-04T14:21:47.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Player.cs",
+              "RelativeDocumentMoniker": "UNO_game\\Player.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Player.cs",
+              "RelativeToolTip": "UNO_game\\Player.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA3wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T14:21:44.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Opponent.cs",
-              "DocumentMoniker": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Opponent.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Opponent.cs",
               "RelativeDocumentMoniker": "UNO_game\\Opponent.cs",
-              "ToolTip": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Opponent.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Opponent.cs",
               "RelativeToolTip": "UNO_game\\Opponent.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAlwCAAAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:25:25.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ColorCard.cs",
-              "DocumentMoniker": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\ColorCard.cs",
-              "RelativeDocumentMoniker": "UNO_game\\ColorCard.cs",
-              "ToolTip": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\ColorCard.cs",
-              "RelativeToolTip": "UNO_game\\ColorCard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:12:21.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Card.cs",
-              "DocumentMoniker": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Card.cs",
-              "RelativeDocumentMoniker": "UNO_game\\Card.cs",
-              "ToolTip": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Card.cs",
-              "RelativeToolTip": "UNO_game\\Card.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAwAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T14:43:24.196Z"
+              "WhenOpened": "2024-07-04T14:21:39.48Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Deck.cs",
-              "DocumentMoniker": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Deck.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Deck.cs",
               "RelativeDocumentMoniker": "UNO_game\\Deck.cs",
-              "ToolTip": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Deck.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Deck.cs",
               "RelativeToolTip": "UNO_game\\Deck.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T15:18:22.851Z"
+              "WhenOpened": "2024-07-04T14:21:30.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game.cs [Design]",
-              "DocumentMoniker": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Game.cs",
-              "RelativeDocumentMoniker": "UNO_game\\Game.cs",
-              "ToolTip": "F:\\user.dare\\Desktop\\UNO_game\\UNO_game\\UNO_game\\Game.cs [Design]",
-              "RelativeToolTip": "UNO_game\\Game.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "ColorCard.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\ColorCard.cs",
+              "RelativeDocumentMoniker": "UNO_game\\ColorCard.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\ColorCard.cs",
+              "RelativeToolTip": "UNO_game\\ColorCard.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:36:03.054Z"
+              "WhenOpened": "2024-07-04T14:21:27.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Color_Picker.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Color_Picker.cs",
+              "RelativeDocumentMoniker": "UNO_game\\Color_Picker.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Color_Picker.cs [Design]",
+              "RelativeToolTip": "UNO_game\\Color_Picker.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T14:21:25.961Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BlackCard.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\BlackCard.cs",
+              "RelativeDocumentMoniker": "UNO_game\\BlackCard.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\BlackCard.cs",
+              "RelativeToolTip": "UNO_game\\BlackCard.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T14:21:20.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CardFactory.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\CardFactory.cs",
+              "RelativeDocumentMoniker": "UNO_game\\CardFactory.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\CardFactory.cs",
+              "RelativeToolTip": "UNO_game\\CardFactory.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T14:20:57.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Card.cs",
+              "RelativeDocumentMoniker": "UNO_game\\Card.cs",
+              "ToolTip": "C:\\Users\\LENOVO!\\Desktop\\unoZaStefan\\UNO_game\\UNO_game\\Card.cs",
+              "RelativeToolTip": "UNO_game\\Card.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA1wAwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T14:43:24.196Z",
+              "EditorCaption": ""
             }
           ]
         }
